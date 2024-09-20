@@ -12,6 +12,7 @@ export const authSlice = createSlice({
   reducers: {
     signUp: (state, action) => {
       const user = {
+        userId: nanoid(),
         username: action.payload.username,
         email: action.payload.email,
         password: action.payload.password,
